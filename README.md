@@ -32,3 +32,7 @@ replacing the <> as necessary. Once it is done you can run the script.
 > :warning: The script is taking long time to run and is putting some load on the Reddit website, please don't abuse it!
 
 ## 1. Data Cleaning and Engineering
+
+Now that the reviews are extracted we need to convert them in something that can be feed in the rest of the model. To do so, the text was Lemmatized. Two lemmatization methods: WordNet and SpaCy. After inspection, SpaCy seemed to perform a better job at lemmatizing the reviews. A list of stop words was recursivly generated during Exploratory Data Analysis to remove words that don't add supplementary informations (like very common words from the english language).
+
+Not that we have the transformed the reviews into lists of lemmatized words, it was necessary to find a numerical value for them. The technique chosen was TF-IDF. Which basically give a score to the importance of the word in the text.
